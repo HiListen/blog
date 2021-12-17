@@ -33,7 +33,7 @@ class ContactController extends AbstractController
         $contact = $this->contactRepository->find($id);
 
         return $this->render('contact/index.html.twig', [
-            'name' => 'Alex',
+            'name' => 'oui',
             'contacts' => $this->contactRepository->findAll(),
             'currentContact' => $contact
         ]);
