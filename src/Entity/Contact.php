@@ -45,7 +45,7 @@ class Contact
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $newsletter;
+    private $newsletter = false;
 
     public function getId(): ?int
     {
@@ -112,7 +112,7 @@ class Contact
         return $this;
     }
 
-    public function getNewsletter(): ?string
+    public function getNewsletter(): ?bool
     {
         return $this->newsletter;
     }

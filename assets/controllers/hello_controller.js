@@ -1,5 +1,7 @@
 import { Controller } from 'stimulus';
 
+import { Controller } from 'stimulus';
+
 /*
  * This is an example Stimulus controller!
  *

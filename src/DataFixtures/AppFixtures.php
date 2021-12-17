@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Article;
 use App\Entity\Contact;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
@@ -19,6 +20,12 @@ class AppFixtures extends Fixture
         $contact->setMessage('ça commence a me les briser');
         $contact->setNewsletter('bon c est chiant');
 
+        $article = new Article();
+        $article->setNom('Article Putaclick');
+        $article->setSlug('j avoue');
+        $article->setContenu('je sais pas');
+        
+        $manager->persist($article);
         $manager->persist($contact);
         $manager->flush();
     }
